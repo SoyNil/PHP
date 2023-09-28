@@ -22,33 +22,35 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
-
+            <form action="{{route('login')}}" method="post">
+            @csrf
             <div class="mb-md-5 mt-md-4 pb-5">
-
+            
+            
               <h2 class="fw-bold mb-2 text-uppercase">Inicio de sesión</h2>
               <p class="text-white-50 mb-5">¡Por favor ingrese su correo y contraseña!</p>
 
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Ingrese su correo"/>
+                <input type="email" id="typeEmailX" name="correo" class="form-control form-control-lg" placeholder="Ingrese su correo"/>
                 <label class="form-label" for="typeEmail">Correo electrónico</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Ingrese su contraseña" />
+                <input type="password" id="typePasswordX" name="contra" class="form-control form-control-lg" placeholder="Ingrese su contraseña" />
                 <label class="form-label" for="typePasswordX">Contraseña</label>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">¿Olvidaste la contraseña?</a></p>
 
               <button class="btn btn-outline-light btn-lg px-5" type="submit">Ingresar</button>
-
+            
             </div>
 
             <div>
               <p class="mb-0">¿No tienes una cuenta? <a href="{{route('register')}}" class="text-white-50 fw-bold">Créala aqui</a>
               </p>
             </div>
-
+            </form>
           </div>
         </div>
       </div>

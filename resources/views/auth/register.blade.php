@@ -22,7 +22,8 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
-
+          <form action="{{route('login')}}" method="post">
+            @csrf
             <div class="mb-md-5 mt-md-4 pb-5">
 
               <h2 class="fw-bold mb-2 text-uppercase">Registro</h2>
@@ -37,15 +38,15 @@
                 <label class="form-label" for="typePasswordX">Contraseña</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeUsu" class="form-control form-control-lg" placeholder="Ingrese su nombre de usuario"/>
+                <input type="text" id="typeUsu" class="form-control form-control-lg" placeholder="Ingrese su nombre de usuario"/>
                 <label class="form-label" for="typeText">Usuario</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeNomb" class="form-control form-control-lg" placeholder="Ingrese su nombre"/>
+                <input type="text" id="typeNomb" class="form-control form-control-lg" placeholder="Ingrese su nombre"/>
                 <label class="form-label" for="typeText">Nombre del usuario</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="email" id="typeApell" class="form-control form-control-lg" placeholder="Ingrese su apellido"/>
+                <input type="text" id="typeApell" class="form-control form-control-lg" placeholder="Ingrese su apellido"/>
                 <label class="form-label" for="typeText">Apellido del usuario</label>
               </div>
 
@@ -57,6 +58,7 @@
               <p class="mb-0">¿Ya tienes una cuenta? <a href="{{route('login')}}" class="text-white-50 fw-bold">Inicie sesión aquí</a>
               </p>
             </div>
+          </form>
 
           </div>
         </div>
